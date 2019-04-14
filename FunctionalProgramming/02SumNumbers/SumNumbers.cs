@@ -8,7 +8,8 @@ namespace _02SumNumbers
     {
         static void Main(string[] args)
         {
-            List<int> inputNumbers = Console.ReadLine().Split(", ")
+            List<int> inputNumbers = Console.ReadLine()
+                .Split(", ", StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse)
                 .ToList();
 

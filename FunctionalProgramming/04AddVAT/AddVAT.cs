@@ -9,7 +9,7 @@ namespace _04AddVAT
         static void Main(string[] args)
         {
             List<double> numbersWithVAT = Console.ReadLine()
-                .Split(", ")
+                .Split(", ", StringSplitOptions.RemoveEmptyEntries)
                 .Select(double.Parse)
                 .Select(n => n * 1.2)
                 .ToList();
