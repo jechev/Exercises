@@ -8,10 +8,13 @@ namespace _04AddVAT
     {
         static void Main(string[] args)
         {
+            Func<double, double> addVat = n => n * 1.2;
+
+
             List<double> numbersWithVAT = Console.ReadLine()
-                .Split(", ", StringSplitOptions.RemoveEmptyEntries)
+                .Split(new[] {' ', ',' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(double.Parse)
-                .Select(n => n * 1.2)
+                .Select(addVat)
                 .ToList();
 
             Console.WriteLine(string.Join(", ", numbersWithVAT));

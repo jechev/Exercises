@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResistorColor", "ResistorColor.csproj", "{28094DF3-8E51-4BA9-8743-E61BE546AAEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28094DF3-8E51-4BA9-8743-E61BE546AAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28094DF3-8E51-4BA9-8743-E61BE546AAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28094DF3-8E51-4BA9-8743-E61BE546AAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28094DF3-8E51-4BA9-8743-E61BE546AAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8DB3C62-D19E-4AE4-BD80-E2171F5742EE}
+	EndGlobalSection
+EndGlobal
