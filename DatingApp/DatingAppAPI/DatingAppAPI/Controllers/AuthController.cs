@@ -33,22 +33,22 @@ namespace DatingAppAPI.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserRegisterDto userForRegisterDto)
         {
-            string username = userForRegisterDto.Username.ToLower();
+            userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
 
-            if (await _repo.UserExist(username))
+            if (await _repo.UserExist(userForRegisterDto.Username))
             {
                 return BadRequest("Username already exists");
             }
 
-            User newUser = new User()
-            {
-                Username = username
-            };
+            User newUser = _mapper.Map<User>(userForRegisterDto);
 
             User createdUser = await _repo.Register(newUser, userForRegisterDto.Password);
 
-            return StatusCode(201);
+            UserForDetailedDto userToReturn = _mapper.Map<UserForDetailedDto>(createdUser);
+
+            return CreatedAtRoute("GetUser", new { controller = "Users", id = createdUser.Id}, userToReturn);
         }
+
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserLoginDto userForLoginDto)
         {
